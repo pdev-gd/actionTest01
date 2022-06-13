@@ -1,0 +1,15 @@
+name: helloGithubAction
+ 
+on: [push]
+
+jobs:
+  build:
+		runs-on: ${{matrix.os}}
+		strategy:
+			matrix:
+				os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+     
+    - name: print hello world !!
+      run: echo hello, world!
